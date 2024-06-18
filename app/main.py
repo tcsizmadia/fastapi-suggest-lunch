@@ -9,3 +9,8 @@ def read_root():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
+
+# TODO: Implement the evaluation of the application's health status in the future.
+@app.get("/health")
+def health():
+    return {"status": "HEALTHY"}
